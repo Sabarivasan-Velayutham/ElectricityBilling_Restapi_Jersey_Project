@@ -1,0 +1,827 @@
+{
+	"info": {
+		"_postman_id": "787eb6a1-705d-4ee6-99fc-6d3a6ae648f9",
+		"name": "Electricity",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "23740952",
+		"_collection_link": "https://grey-sunset-734932.postman.co/workspace/Zoho-Team-Workspace~8b306bbc-dbf1-4e66-87e7-4124c62fac1f/collection/23740952-787eb6a1-705d-4ee6-99fc-6d3a6ae648f9?action=share&source=collection_link&creator=23740952"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "v1",
+					"item": [
+						{
+							"name": "AllUsers",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjEiLCJpYXQiOjE3MTMwMzEyNTcsImV4cCI6MTcxMzAzMTU1N30.XvogcQvqr1Hig1ew5cDTZgA6gsXUGI1efzpHH_ZJeoo"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8081/electricity/webapi/v1/users"
+							},
+							"response": []
+						},
+						{
+							"name": "AddUsers",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjEiLCJpYXQiOjE3MTI3MzUzNTEsImV4cCI6MTcxMjczNTY1MX0.GEiQRwIxGbw0BXiE9-a4Wy6fiLYz9ZubU_fFYML8ah0"
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"testa\",\r\n    \"password\": \"123\",\r\n    \"address\": \"Theni\",\r\n    \"billAmount\": 13233\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8081/electricity/webapi/v1/users"
+							},
+							"response": []
+						},
+						{
+							"name": "EditUserDetails",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjEiLCJpYXQiOjE3MTI3MzYwMzUsImV4cCI6MTcxMjczNjMzNX0.LbZpG3inARBN53MqzVNATUDVACcKTvzbv7M9OjhvRP8"
+									}
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Transfer-Encoding",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"address\": \"dubai\",\r\n        \"billAmount\": 1323.0,\r\n        \"billStatus\": \"paid\",\r\n        \"password\": \"123\",\r\n        \"username\": \"testaaa\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8081/electricity/webapi/v1/users/22"
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteUser",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjEiLCJpYXQiOjE3MTI3MzE1OTUsImV4cCI6MTcxMjczMTg5NX0.fjp8hEeythDlzy8LLUvvCJwQ6csS-hf408mFlCfb2x4"
+									}
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": "http://localhost:8081/electricity/webapi/v1/users/9"
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateUserBills",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjEiLCJpYXQiOjE3MTI3NDAyNzEsImV4cCI6MTcxMjc0MDU3MX0.9JSOWwJNzzUwU5htxAq5NXhZE07Ir9wMuQfughJaDHo"
+									}
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"billAmount\": 9874.0,\r\n    \"billStatus\": \"notpaid\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8081/electricity/webapi/v1/users/updateuserbill/22"
+							},
+							"response": []
+						},
+						{
+							"name": "SearchUser(id)",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": ""
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8081/electricity/webapi/v1/users/25"
+							},
+							"response": []
+						},
+						{
+							"name": "SearchUser(name)",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjEiLCJpYXQiOjE3MTI3Mzk1MzQsImV4cCI6MTcxMjczOTgzNH0.U2-c1d_86KuYn_-aFbqoTHEcu4sP93WCbC0-JLsLEvA"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8081/electricity/webapi/v1/users/searching/testaaa"
+							},
+							"response": []
+						},
+						{
+							"name": "SortUserID(asc)",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjEiLCJpYXQiOjE3MTI3Mzk4NzQsImV4cCI6MTcxMjc0MDE3NH0.y0zBTZY8Uo7lr_6eIIB_SUHiyVfnGyFahsFQVrwtSQc"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/electricity/webapi/v1/users/sorting?by=id&order=asc",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"electricity",
+										"webapi",
+										"v1",
+										"users",
+										"sorting"
+									],
+									"query": [
+										{
+											"key": "by",
+											"value": "id"
+										},
+										{
+											"key": "order",
+											"value": "asc"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SortUserID(desc)",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjEiLCJpYXQiOjE3MTI3Mzk4NzQsImV4cCI6MTcxMjc0MDE3NH0.y0zBTZY8Uo7lr_6eIIB_SUHiyVfnGyFahsFQVrwtSQc"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/electricity/webapi/v1/users/sorting?by=id&order=desc",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"electricity",
+										"webapi",
+										"v1",
+										"users",
+										"sorting"
+									],
+									"query": [
+										{
+											"key": "by",
+											"value": "id"
+										},
+										{
+											"key": "order",
+											"value": "desc"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SortUserName(asc)",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjEiLCJpYXQiOjE3MTI2NDg3OTIsImV4cCI6MTcxMjY0OTA5Mn0.kwkuROMc96TJcyA3AlIwJISu_nkF3yEN7ph4VgPd6XU"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/electricity/webapi/v1/users/sorting?by=username&order=asc",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"electricity",
+										"webapi",
+										"v1",
+										"users",
+										"sorting"
+									],
+									"query": [
+										{
+											"key": "by",
+											"value": "username"
+										},
+										{
+											"key": "order",
+											"value": "asc"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SortUserName(desc)",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjEiLCJpYXQiOjE3MTI2NDg3OTIsImV4cCI6MTcxMjY0OTA5Mn0.kwkuROMc96TJcyA3AlIwJISu_nkF3yEN7ph4VgPd6XU"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/electricity/webapi/v1/users/sorting?by=username&order=desc",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"electricity",
+										"webapi",
+										"v1",
+										"users",
+										"sorting"
+									],
+									"query": [
+										{
+											"key": "by",
+											"value": "username"
+										},
+										{
+											"key": "order",
+											"value": "desc"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "v2",
+					"item": [
+						{
+							"name": "AllUsers",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjEiLCJpYXQiOjE3MTI3MzUwNDEsImV4cCI6MTcxMjczNTM0MX0.msKtcuMCHXURX5gOpYWzgwWrXQwddtmAtYQJ_bKDNfU"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8081/electricity/webapi/v2/users"
+							},
+							"response": []
+						},
+						{
+							"name": "AddUsers",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjEiLCJpYXQiOjE3MTI3MzgzMjgsImV4cCI6MTcxMjczODYyOH0.9-WlR_ulNH5yNmb3mma7uoclAfXpLrmkZvrVAujYOR8"
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"testb\",\r\n    \"password\": \"123\",\r\n    \"address\": \"123 Example St\",\r\n    \"email\": \"test2@gmail.com\",\r\n    \"phoneNo\": \"9874589658\",\r\n    \"city\": \"chennai\",\r\n    \"state\": \"tamilnadu\",\r\n    \"pincode\": \"614602\",\r\n    \"billAmount\": 5000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8081/electricity/webapi/v2/users"
+							},
+							"response": []
+						},
+						{
+							"name": "EditUserDetails",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjEiLCJpYXQiOjE3MTI3Mzg3ODAsImV4cCI6MTcxMjczOTA4MH0.kE8-bps6Wl8hgk2fT1SObbphiEzBmmL2MF9IwId97MM"
+									}
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Transfer-Encoding",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"testbbb\",\r\n    \"password\": \"456\",\r\n    \"address\": \"Theni\",\r\n    \"billAmount\": 99.0,\r\n    \"billStatus\": \"paid\",\r\n    \"email\": \"example@gmail.com\",\r\n    \"phoneNo\": \"1234567890\",\r\n    \"city\": \"CityName\",\r\n    \"state\": \"StateName\",\r\n    \"pincode\": \"123456\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8081/electricity/webapi/v2/users/25"
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteUser",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjEiLCJpYXQiOjE3MTI3MzE1OTUsImV4cCI6MTcxMjczMTg5NX0.fjp8hEeythDlzy8LLUvvCJwQ6csS-hf408mFlCfb2x4"
+									}
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": "http://localhost:8081/electricity/webapi/v1/users/9"
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateUserBills",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjEiLCJpYXQiOjE3MTI3NDAyNzEsImV4cCI6MTcxMjc0MDU3MX0.9JSOWwJNzzUwU5htxAq5NXhZE07Ir9wMuQfughJaDHo"
+									}
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"billAmount\": 345.0,\r\n    \"billStatus\": \"notpaid\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8081/electricity/webapi/v2/users/updateuserbill/25"
+							},
+							"response": []
+						},
+						{
+							"name": "SearchUser(id)",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjEiLCJpYXQiOjE3MTI3MzkxNDEsImV4cCI6MTcxMjczOTQ0MX0.EuSid64cSvNU0XICJuimU6_Aui4rAqWWOfwR_szPWDs"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8081/electricity/webapi/v2/users/25"
+							},
+							"response": []
+						},
+						{
+							"name": "SearchUser(name)",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjEiLCJpYXQiOjE3MTI3Mzk1MzQsImV4cCI6MTcxMjczOTgzNH0.U2-c1d_86KuYn_-aFbqoTHEcu4sP93WCbC0-JLsLEvA"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8081/electricity/webapi/v2/users/searching/testbbb"
+							},
+							"response": []
+						},
+						{
+							"name": "SortUserID(asc)",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjEiLCJpYXQiOjE3MTI3Mzk4NzQsImV4cCI6MTcxMjc0MDE3NH0.y0zBTZY8Uo7lr_6eIIB_SUHiyVfnGyFahsFQVrwtSQc"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/electricity/webapi/v2/users/sorting?by=id&order=asc",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"electricity",
+										"webapi",
+										"v2",
+										"users",
+										"sorting"
+									],
+									"query": [
+										{
+											"key": "by",
+											"value": "id"
+										},
+										{
+											"key": "order",
+											"value": "asc"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SortUserID(desc)",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjEiLCJpYXQiOjE3MTI3Mzk4NzQsImV4cCI6MTcxMjc0MDE3NH0.y0zBTZY8Uo7lr_6eIIB_SUHiyVfnGyFahsFQVrwtSQc"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/electricity/webapi/v2/users/sorting?by=id&order=desc",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"electricity",
+										"webapi",
+										"v2",
+										"users",
+										"sorting"
+									],
+									"query": [
+										{
+											"key": "by",
+											"value": "id"
+										},
+										{
+											"key": "order",
+											"value": "desc"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SortUserName(asc)",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjEiLCJpYXQiOjE3MTI3Mzk4NzQsImV4cCI6MTcxMjc0MDE3NH0.y0zBTZY8Uo7lr_6eIIB_SUHiyVfnGyFahsFQVrwtSQc"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/electricity/webapi/v2/users/sorting?by=username&order=asc",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"electricity",
+										"webapi",
+										"v2",
+										"users",
+										"sorting"
+									],
+									"query": [
+										{
+											"key": "by",
+											"value": "username"
+										},
+										{
+											"key": "order",
+											"value": "asc"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SortUserName(desc)",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbjEiLCJpYXQiOjE3MTI2NDg3OTIsImV4cCI6MTcxMjY0OTA5Mn0.kwkuROMc96TJcyA3AlIwJISu_nkF3yEN7ph4VgPd6XU"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8081/electricity/webapi/v2/users/sorting?by=username&order=desc",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"electricity",
+										"webapi",
+										"v2",
+										"users",
+										"sorting"
+									],
+									"query": [
+										{
+											"key": "by",
+											"value": "username"
+										},
+										{
+											"key": "order",
+											"value": "desc"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "v1",
+					"item": [
+						{
+							"name": "Registration",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"saba\",\r\n    \"password\": \"saba\",\r\n    \"address\": \"123 Example St\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8081/electricity/webapi/v1/users/registration"
+							},
+							"response": []
+						},
+						{
+							"name": "BillHistory",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "aawfawfef"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": "http://localhost:8081/electricity/webapi/v1/users/bills/19"
+							},
+							"response": []
+						},
+						{
+							"name": "BillPayment",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjE3LCJzdWIiOiJzYWJhIiwiaWF0IjoxNzEyNzI4NTEyLCJleHAiOjE3MTI3Mjg4MTJ9.hKJXEdOmcYS14E0CtuW0NoKlbqQzBriiwHvT_MsBKdc"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"payment\": \"proceed\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8081/electricity/webapi/v1/users/bills/payment/17"
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "v2",
+					"item": [
+						{
+							"name": "Registration",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"nanna\",\r\n    \"password\": \"nanna\",\r\n    \"address\": \"123 Example St\",\r\n    \"email\": \"nanna@gmail.com\",\r\n    \"phoneNo\": \"9874589658\",\r\n    \"city\": \"chennai\",\r\n    \"state\": \"tamilnadu\",\r\n    \"pincode\": \"614602\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8081/electricity/webapi/v2/users/registration"
+							},
+							"response": []
+						},
+						{
+							"name": "BillHistory",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjE4LCJzdWIiOiJuYW5uYSIsImlhdCI6MTcxMjcyNzg0MSwiZXhwIjoxNzEyNzI4MTQxfQ.tbGV02e4efk60UvPjDiT6_FReHWnJFoBgVmCXfxF9B4"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:8081/electricity/webapi/v2/users/bills/18"
+							},
+							"response": []
+						},
+						{
+							"name": "BillPayment",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjE4LCJzdWIiOiJuYW5uYSIsImlhdCI6MTcxMjcyODU0NywiZXhwIjoxNzEyNzI4ODQ3fQ.sPKSTujhmDttTPPsz6wJLuriEmDJh6TfGKx0AVyNtmQ"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"payment\": \"UPI\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:8081/electricity/webapi/v2/users/bills/payment/18"
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "UserLogin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "Harish",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "456",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:8081/electricity/webapi/users/authentication"
+					},
+					"response": []
+				},
+				{
+					"name": "AdminLogin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "admin1",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123",
+									"type": "text"
+								}
+							]
+						},
+						"url": "http://localhost:8081/electricity/webapi/users/admin/authentication"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
