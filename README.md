@@ -25,7 +25,7 @@ This project is a Java-based web application designed to manage electricity usag
 1. **Clone the repository**:
 
     ```bash
-    git clone <repository_url>
+    git clone https://github.com/Sabarivasan-Velayutham/ElectricityBilling_Restapi_Jersey_Project.git
     ```
 
 2. **Navigate to the project directory**:
